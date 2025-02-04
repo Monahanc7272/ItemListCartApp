@@ -1,11 +1,26 @@
 ## Summary 
 This is a simple e-commerce cart application built with Next.js. The app allows users to browse a list of items, add them to their cart, view the cart summary, and proceed to checkout.
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+### Key Dependencies:
+
+- **Next.js**: A React framework for building fast, SEO-friendly web apps.
+- **React**: A JavaScript library for building user interfaces.
+- **React DOM**: Provides DOM-specific methods for React.
+- **@mui/icons-material**: Material UI's icons library for adding SVG icons.
+- **react-hot-toast**: A package for displaying toast notifications in a modern way.
+- **Tailwind CSS**: A utility-first CSS framework for styling.
+
+### Dev Dependencies:
+
+- **@emotion/react** and **@emotion/styled**: Libraries used for writing CSS styles with JavaScript in React components.
+- **ESLint**: A tool for identifying and fixing linting issues in your code.
+- **eslint-config-next**: An ESLint configuration specifically for Next.js projects.
+- **PostCSS**: A tool for transforming CSS with JavaScript plugins.
 
 ## Getting Started
 
-First, run the development server:
+Run the development server:
 
 ```bash
 npm run dev

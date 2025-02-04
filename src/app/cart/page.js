@@ -6,11 +6,17 @@ import IconButton from "@mui/material/IconButton";
 import CloseIcon from '@mui/icons-material/Close';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function CartPage({ handleCloseCart }) {
     const { cart, addToCart, decreaseQuantity, removeFromCart } = useContext(CartContext);
     const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
+    const router = useRouter();
+
+    const handleProceedToCheckout = () => {
+      router.push("/checkout");
+    };
   
     return (
       <div className="z-40 w-full sm:w-1/2 md:w-1/3 lg:w-1/3 bg-gray-100 border-l fixed right-0 top-0 h-screen shadow-lg flex flex-col">
@@ -56,8 +62,8 @@ export default function CartPage({ handleCloseCart }) {
               <button onClick={handleCloseCart} className="px-4 py-2 bg-gray-500 text-white font-medium rounded-lg hover:bg-gray-600 transition w-1/2 mr-2">
                 Close
               </button>
-              <button className="px-4 py-2 bg-green-500 text-white font-medium rounded-lg hover:bg-green-600 transition w-1/2">
-              <Link href="/checkout">Proceed to Checkout</Link>
+              <button onClick={handleProceedToCheckout} className="px-4 py-2 bg-green-500 text-white font-medium rounded-lg hover:bg-green-600 transition w-1/2">
+              Proceed to Checkout
               </button>
             </div>
           </div>

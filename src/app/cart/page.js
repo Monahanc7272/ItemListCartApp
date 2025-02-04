@@ -16,8 +16,8 @@ export default function CartPage({ handleCloseCart }) {
       <div className="z-40 w-full sm:w-1/2 md:w-1/3 lg:w-1/3 bg-gray-100 border-l fixed right-0 top-0 h-screen shadow-lg flex flex-col">
         <div className="sticky top-0 bg-white shadow p-4 flex items-center justify-between z-50">
           <h2 className="text-xl font-bold">My Shopping Cart</h2>
-          <IconButton onClick={handleCloseCart}>
-            <CloseIcon fontSize="large" sx={{ color: "black" }} />
+          <IconButton onClick={handleCloseCart} className="text-black">
+            <CloseIcon fontSize="large"/>
           </IconButton>
         </div>
   

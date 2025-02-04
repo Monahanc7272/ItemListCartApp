@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useCallback } from "react";
 import { CartContext } from "../context/CartContext";
 import { items } from "../data/items";
 import toast from "react-hot-toast";
@@ -15,16 +15,19 @@ export default function ItemListPage() {
       });
     };
   
-    const handleAddToCart = async (item) => {
-      try {
-        await simulateAddToCart(item);
-        addToCart(item);
-        toast.success("Item added to cart!");
-      } catch (error) {
-        console.error("Error adding item to cart:", error);
-        toast.error("Failed to add item to cart. Please try again.");
-      }
-    };
+    const handleAddToCart = useCallback(
+        async (item) => {
+            try {
+            await simulateAddToCart(item);
+            addToCart(item);
+            toast.success("Item added to cart!");
+            } catch (error) {
+            console.error("Error adding item to cart:", error);
+            toast.error("Failed to add item to cart. Please try again.");
+            }
+        },
+        [addToCart]
+        );
   
     return (
       <div className="w-full p-6">

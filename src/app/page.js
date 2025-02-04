@@ -22,8 +22,8 @@ export default function MainPage() {
     <div className="relative">
       <div className="fixed top-4 right-6 z-50">
         {isCartOpen ? null : (
-          <IconButton onClick={handleOpenCart}>
-            <ShoppingCartIcon fontSize="large" sx={{ color: "black" }} />
+          <IconButton onClick={handleOpenCart} className="text-black">
+            <ShoppingCartIcon fontSize="large"/>
           </IconButton>
         )}
       </div>

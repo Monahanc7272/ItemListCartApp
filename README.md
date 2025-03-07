@@ -54,7 +54,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 - **Cart Item Counter:** Adding a counter to the Cart icon to display number of items in the cart.  
 - **Clear Cart Button:** A button to completely clear all items in the cart.  
-- **Item Sorting:** Ability to sort items alphabetically or by price in ascending/decending order. **(Completed 07/03/25)**
+- **Item Sorting:** Ability to sort items alphabetically or by price in ascending/decending order. **(✅ 07/03/25)**
 - **Quantity Adjustment:** Editable quantity input in the cart (instead of relying on plus/minus buttons).  
 - **AppBar:** A sticky AppBar at the top as a nice UI addition and for easy navigation.  
 - **Checkout Page:** Adding quantity adjustments and item removal to the Order Summary.  
